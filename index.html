@@ -1,189 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Zhang Lin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zlzl</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
+
 <body>
-    <div class="container">
-        <h1>个人简历</h1>
-        <div class="section">
-            <h2 class="section-title">个人信息</h2>
-            <div class="section-content personal-info">
-                <img class="profile-picture" src="./img/白底plus.jpg" alt="Profile Picture">
-                <div class="info-details">
-                    <p><span class="highlight">姓名:</span> 张琳</p>
-                    <p><span class="highlight">年龄:</span> 20岁</p>
-                    <p><span class="highlight">邮箱:</span> abcd1234913@163.com</p>
-                    <p><span class="highlight">电话:</span> 15939666211</p>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="#section1">个人信息</a>
+        <a href="#section2">项目介绍</a>
+        <a href="#section3">其他经历</a>
+    </div>
+
+    <div id="section1" class="section1">
+        <div class="container">
+            <div class="info-item">
+                <i class="fas fa-user"></i>
+                <span>姓名：张琳</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-birthday-cake"></i>
+                <span>年龄: 20</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-venus-mars"></i>
+                <span>性别：男</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>年级: 2026届本科</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>电话: 15939666211</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>邮箱: abcd1234913@163.com</span>
+            </div>
+        </div>
+        <div>111</div>
+    </div>
+
+    <div id="section2" class="section">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img" style="padding-top: 200px;padding-left: 180px;width: 250px; height:200px;"><img
+                            src="./img/数据可视化.png" alt="6" style="width: 500px;height: 300px;"></div>
+                    <div class="wenzi"
+                        style="font-size: 30px;padding-top: 175px;padding-left: 430px;white-space: nowrap;">
+                        <h1 style="font-size: 36px;padding-bottom: 8px;">A Vue.js project 数据可视化</h1>
+                        <h1 style="line-height: 54px;font-size: 16px;">
+                            一个基于Vue前端框架和第三方图表库echarts构建的可视化大数据平台<br />
+                            项目采用 Vuex 进行状态管理，axios 获取后端 API 数据<br />
+                            根据用户的操作动态更新图表数据展示<br />
+                            支持登录、动态操作、图表下载、实时更新、响应式布局...<br />
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img" style="padding-top: 200px;padding-left: 180px;width: 450px; height:600px;"><img
+                            src="./img/数据可视化.png" alt="6" style="width: 500px;height: 300px;"></div>
+                    <div class="wenzi" style="font-size: 30px;padding-top: 200px;padding-left:230px;">
+                        <h1 style="font-size: 20px;padding-bottom: 8px;">前端22</h1>
+                        <h1 style="line-height: 54px">前端2</h1>
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="section">
-            <h2 class="section-title">教育经历</h2>
-            <div class="section-content">
-                <p><span class="highlight">学校:</span> 重庆邮电大学</p>
-                <p><span class="highlight">专业:</span> 软件工程专业</p>
-                <p><span class="highlight">学历:</span> 2022级本科</p>
-            </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
+            style="padding-left: 679px;white-space: nowrap;margin-top: -100px;">
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                aria-label="Go to slide 4"></span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
         </div>
-        <div class="section">
-            <h2 class="section-title">技能</h2>
-            <div class="section-content">
-                <div class="skills">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">React</div>
-                    <div class="skill">Vue</div>
-                    <div class="skill">Bootstrap</div>
-                    <div class="skill">Ps</div>
-                    <div class="skill">Git</div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2 class="section-title">比赛经历</h2>
-            <div class="section-content">
-                <p>数模</p>
-                <p></p>
-            </div>
-        </div>
-        <div class="section">
-            <h2 class="section-title">项目</h2>
-            <div class="section-content">
-                <p><span class="highlight">项目名称:</span> 数据可视化</p>
-                <p><span class="highlight">项目描述:</span> 数据可视化项目</p>
-            </div>
+
+        <!-- Swiper JS -->
+        <script src="./js/swiper.min.js"></script>
+        <script src="./js/TweenMax.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+        //自动播放
+        var swiper = new Swiper('.swiper-container', {
+            keyboard: true,
+            virtualTranslate: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                waitForTransition: false, // 等待过渡效果完成后再自动播放下一个幻灯片
+            },
+            on: {
+                setTranslate: function () {
+                    this.$wrapperEl.transition('')
+                    TweenMax.to(this.$wrapperEl, 1.5, { x: this.translate, ease: Power4.easeOut })
+                }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+    </div>
+
+    <div id="section3" class="section">
+        <div>
+            <span>学业二等奖学金</span><br />
+            <span>三好学生</span><br />
+            <span>CET-4/CET-6</span><br />
+            <span>比赛：数模、创新创业</span><br />
+            <span>重庆邮电大学·信管工作室成员</span><br />
+            <span>重庆邮电大学·网络空间与信息安全实验室成员</span><br />
         </div>
     </div>
 </body>
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(120deg, #fdfbfb, #ebedee);
-        color: #333;
-    }
 
-    .container {
-        max-width: 900px;
-        margin: 50px auto;
-        padding: 40px;
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 36px;
-        font-weight: 600;
-        color: #2e88d1;
-        margin-bottom: 40px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .section {
-        margin-bottom: 40px;
-    }
-
-    .section-title {
-        font-size: 24px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 15px;
-        position: relative;
-    }
-
-    .section-title::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 50px;
-        height: 3px;
-        background-color: #2e88d1;
-        border-radius: 2px;
-    }
-
-    .section-content {
-        padding-left: 20px;
-    }
-
-    .personal-info {
-        display: flex;
-        align-items: center;
-    }
-
-    .profile-picture {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        border: 5px solid #fff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        margin-right: 20px;
-        object-fit: cover;
-    }
-
-    .info-details p {
-        margin: 5px 0;
-        font-size: 16px;
-        margin-left: 80px;
-    }
-
-    .highlight {
-        color: #2e88d1;
-        font-weight: bold;
-    }
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    .skill {
-        background-color: #2e88d1;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 50px;
-        font-size: 14px;
-        font-weight: 500;
-        transition: background-color 0.3s;
-    }
-
-    .skill:hover {
-        background-color: #1d5c91;
-    }
-
-    @media (max-width: 600px) {
-        .personal-info {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .profile-picture {
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 28px;
-        }
-
-        .section-title {
-            font-size: 20px;
-        }
-        .info-details p {
-        margin: 10px 0;
-        font-size: 16px;
-        margin-left: -53px;
-    }
-    }
-</style>
 </html>
-
