@@ -1,132 +1,463 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
     <title>zlzl</title>
-    <link rel="stylesheet" href="./css/swiper.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- 导航栏 -->
-    <div class="nav">
-        <a href="#section1">个人信息</a>
-        <a href="#section2">项目介绍</a>
-        <a href="#section3">其他经历</a>
-    </div>
 
-    <div id="section1" class="section1">
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-section border-0">
+        <nav class="navbar navbar-light">
+            <div class="navbar-nav flex-column">
+                <a href="#pigraHome" class="nav-item nav-link active"><span class="fa fa-home"></span> Home</a>
+                <a href="#pigraAbout" class="nav-item nav-link"><span class="far fa-address-card"></span> Ability</a>
+                <a href="#pigraProjects" class="nav-item nav-link"><span class="fab fa-servicestack"></span> Projects</a>
+                <a href="#pigraSkills" class="nav-item nav-link"><span class="fa fa-blog"></span> Skills</a>
+                <a href="#pigraOther" class="nav-item nav-link"><span class="fas fa-address-book"></span> Other</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid" id="pigraHome">
         <div class="container">
-            <div class="info-item">
-                <i class="fas fa-user"></i>
-                <span>姓名：张琳</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-birthday-cake"></i>
-                <span>年龄: 20</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-venus-mars"></i>
-                <span>性别：男</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-graduation-cap"></i>
-                <span>年级: 2026届本科</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <span>电话: 15939666211</span>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span>邮箱: abcd1234913@163.com</span>
-            </div>
-        </div>
-        <div>111</div>
-    </div>
-
-    <div id="section2" class="section">
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="img" style="padding-top: 200px;padding-left: 180px;width: 250px; height:200px;"><img
-                            src="./img/数据可视化.png" alt="6" style="width: 500px;height: 300px;"></div>
-                    <div class="wenzi"
-                        style="font-size: 30px;padding-top: 175px;padding-left: 430px;white-space: nowrap;">
-                        <h1 style="font-size: 36px;padding-bottom: 8px;">A Vue.js project 数据可视化</h1>
-                        <h1 style="line-height: 54px;font-size: 16px;">
-                            一个基于Vue前端框架和第三方图表库echarts构建的可视化大数据平台<br />
-                            项目采用 Vuex 进行状态管理，axios 获取后端 API 数据<br />
-                            根据用户的操作动态更新图表数据展示<br />
-                            支持登录、动态操作、图表下载、实时更新、响应式布局...<br />
-                        </h1>
+            <div class="row g-0">
+                <div class="col-12 col-lg-3">
+                    <div class="header-content bg-dark h-100 pt-6 pe-6 pb-6">
+                        <a href="index.html" class="navbar-brand d-inline-flex pb-5 wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="display-6 text-white mb-0">张琳</h1>
+                        </a>
+                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
+                            data-wow-delay="0.3s">
+                            <p class="text-white sub-title">👋 Welcome to my world</p>
+                            <h3 class="display-6 text-white mb-0">重庆邮电大学<br />
+                                <p style="font-size: 30px;">2026届本科生</p>
+                            </h3>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="img" style="padding-top: 200px;padding-left: 180px;width: 450px; height:600px;"><img
-                            src="./img/数据可视化.png" alt="6" style="width: 500px;height: 300px;"></div>
-                    <div class="wenzi" style="font-size: 30px;padding-top: 200px;padding-left:230px;">
-                        <h1 style="font-size: 20px;padding-bottom: 8px;">前端22</h1>
-                        <h1 style="line-height: 54px">前端2</h1>
+                <div class="col-12 col-lg-9">
+                    <div class="header-img d-flex h-100 pt-6 ps-6 pb-6">
+                        <div class="row g-5">
+                            <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="bg-light p-4" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;">
+                                    <img src="img/header-img.png" class="img-fluid w-100"
+                                        style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <h1 class="display-6 mb-4">前端</h1>
+                                <p class="mb-4" style="margin-top: 45px;">Front End Developer
+                                </p>
+                                <div class="d-flex align-items-center mb-2" style="margin-top: 25px;">
+                                    <i class="fas fa-user text-primary me-3"></i>
+                                    <p class="text-dark mb-0">20岁</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-envelope text-primary me-3"></i>
+                                    <p class="text-dark mb-0">abcd1234913@163.com</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa fa-phone-alt text-primary me-3"></i>
+                                    <p class="text-dark mb-0">15939666211</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-4">
+                                    <i class="fas fa-code text-primary me-3"></i>
+                                    <p class="text-dark mb-0">软件工程专业</p>
+                                </div>
+                                <div class="d-flex" style="margin-top: 35px;">
+                                    <a href="https://github.com/zlzzll" class="github-link"><img
+                                            src="./img/github-mark.png" alt=""
+                                            style="width: 40px;margin-left: -10px;"></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
-            style="padding-left: 679px;white-space: nowrap;margin-top: -100px;">
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
-                aria-label="Go to slide 4"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
-        </div>
-
-        <!-- Swiper JS -->
-        <script src="./js/swiper.min.js"></script>
-        <script src="./js/TweenMax.min.js"></script>
-
-        <!-- Initialize Swiper -->
-        <script>
-        //自动播放
-        var swiper = new Swiper('.swiper-container', {
-            keyboard: true,
-            virtualTranslate: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-                waitForTransition: false, // 等待过渡效果完成后再自动播放下一个幻灯片
-            },
-            on: {
-                setTranslate: function () {
-                    this.$wrapperEl.transition('')
-                    TweenMax.to(this.$wrapperEl, 1.5, { x: this.translate, ease: Power4.easeOut })
-                }
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
-    </div>
-
-    <div id="section3" class="section">
-        <div>
-            <span>学业二等奖学金</span><br />
-            <span>三好学生</span><br />
-            <span>CET-4/CET-6</span><br />
-            <span>比赛：数模、创新创业</span><br />
-            <span>重庆邮电大学·信管工作室成员</span><br />
-            <span>重庆邮电大学·网络空间与信息安全实验室成员</span><br />
         </div>
     </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid" id="pigraAbout">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-12 col-lg-3">
+                    <div class="about-header bg-dark h-100 pt-6 pe-6 pb-6">
+                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
+                            data-wow-delay="0.1s">
+                            <p class="text-white sub-title">Ability</p>
+                            <h1 class="display-6 text-white mb-0">前端技能</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="about-content h-100 pt-6 ps-6 pb-6">
+                        <div class="row g-5">
+                            <div class="col-xl-5">
+                                <div class="about-img bg-light p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                    <img src="img/about-ME.png" class="img-fluid w-100" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                                <h4 class="mb-4">专业技能</h4>
+                                </p> <br />
+                                <p class="mb-4">熟悉vueJS、React主流框架;
+
+                                </p> <br />
+                                <p class="mb-4"> 熟练使用git版本控制工具，进行代码管理，实现敏捷开发;
+
+                                </p> <br />
+                                <p class="mb-4"> 熟练使用Bootstarp框架，通过栅格系统快速布局响应式页面;
+
+                                </p> <br />
+                                <p class="mb-4"> 熟练使用Ajax，实现异步页面无刷新抽取数据，同步校验数据;
+
+                                </p> <br />
+                                <p class="mb-4"> 熟练使用jQuery框架，实现页面的交互效果，提高用户体验;
+
+                                </p> <br />
+                                <p class="mb-4"> 熟悉数据库交互技术，了解JSONP等跨域问题;
+
+                                </p> <br />
+                                <p class="mb-4"> 熟练使用HTML、CSS、JavaScript等前端技术，完成网页基本静态布局
+
+                                </p> <br />
+                                <p class="mb-4"> 熟练vue vue-router vuex，了解node.js
+                                </p> <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Experience Start -->
+    <div class="container-fluid" id="pigraProjects">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-3">
+                    <div class="experience-header bg-dark h-100 pt-6 pe-6 pb-6">
+                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
+                            data-wow-delay="0.1s">
+                            <p class="text-white sub-title">Projects</p>
+                            <h1 class="display-6 text-white mb-0">前端项目</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="experience-content h-100 pt-6 ps-6 pb-6">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s" >
+                                    <div class="d-flex align-items-center mb-3">
+                                        <p class="fs-5 mb-0 me-4" >A Vue.js project 数据可视化</p>
+                                        <div style="cursor: default;white-space: nowrap;">
+                                            <span class="fa fa-calendar me-1"></span> 2024 07-10
+                                        </div>
+                                    </div>
+                                    <h4 class="mb-3">Vue + Echarts</h4>
+                                    <img src="./img/数据可视化.png" alt=""
+                                        style="width: 280px;height: 150px;margin-bottom: 20px;">
+                                    <p class="mb-0">简要描述： 一个基于Vue前端框架和第三方图表库echarts构建的可视化大数据平台，
+                                        项目采用 Vuex 进行状态管理，axios 获取后端 API 数据，
+                                        根据用户的操作动态更新图表数据展示，
+                                        支持登录、动态操作、图表下载、实时更新、响应式布局...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <p class="fs-5 mb-0 me-4">正在加载中...</p>
+                                        <div>
+                                            <span class="fa fa-calendar me-1"></span> 正在加载中...
+                                        </div>
+                                    </div>
+                                    <h4 class="mb-3">正在加载中...</h4>
+                                    <p class="mb-0">正在加载中...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Exparience End -->
+
+
+    <!-- Skills Start -->
+    <div class="container-fluid" id="pigraSkills">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-3">
+                    <div class="skills-header h-100 bg-dark pt-6 pe-6 pb-6">
+                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
+                            data-wow-delay="0.1s">
+                            <p class="text-white sub-title">Skills</p>
+                            <h1 class="display-6 text-white mb-0">技能评价</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="skills-content h-100 pt-6 ps-6 pb-6">
+                        <div class="row g-4">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
+                                    data-wow-delay="0.1s">
+                                    <div class="text-primary text-center mb-3"><span
+                                            class="fab fa-wordpress fa-3x"></span></div>
+                                    <div class="counter-counting d-flex justify-content-center">
+                                        <h4 class="display-6" data-toggle="counter-up">84</h4>
+                                        <h4 class="display-6">%</h4>
+                                    </div>
+                                    <p class="mb-0">Vue/React</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
+                                    data-wow-delay="0.3s">
+                                    <div class="text-primary text-center mb-3"><span class="fab fa-figma fa-3x"></span>
+                                    </div>
+                                    <div class="counter-counting d-flex justify-content-center">
+                                        <h4 class="display-6" data-toggle="counter-up">86</h4>
+                                        <h4 class="display-6">%</h4>
+                                    </div>
+                                    <p class="mb-0">Axios/Ajax</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
+                                    data-wow-delay="0.5s">
+                                    <div class="text-primary text-center mb-3"><span class="fab fa-sketch fa-3x"></span>
+                                    </div>
+                                    <div class="counter-counting d-flex justify-content-center">
+                                        <h4 class="display-6" data-toggle="counter-up">60</h4>
+                                        <h4 class="display-6">%</h4>
+                                    </div>
+                                    <p class="mb-0">Node.js</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
+                                    data-wow-delay="0.7s">
+                                    <div class="text-primary text-center mb-3"><span
+                                            class="fab fa-elementor fa-3x"></span></div>
+                                    <div class="counter-counting d-flex justify-content-center">
+                                        <h4 class="display-6" data-toggle="counter-up">75</h4>
+                                        <h4 class="display-6">%</h4>
+                                    </div>
+                                    <p class="mb-0">Mysql</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
+                                    data-wow-delay="0.1s">
+                                    <div class="text-primary text-center mb-3"><span
+                                            class="fab fa-js-square fa-3x"></span></div>
+                                    <div class="counter-counting d-flex justify-content-center">
+                                        <h4 class="display-6" data-toggle="counter-up">74</h4>
+                                        <h4 class="display-6">%</h4>
+                                    </div>
+                                    <p class="mb-0">JavaScript</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
+                                    data-wow-delay="0.3s">
+                                    <div class="text-primary text-center mb-3"><span class="fab fa-html5 fa-3x"></span>
+                                    </div>
+                                    <div class="counter-counting d-flex justify-content-center">
+                                        <h4 class="display-6" data-toggle="counter-up">98</h4>
+                                        <h4 class="display-6">%</h4>
+                                    </div>
+                                    <p class="mb-0">HTML & CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skills End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid" id="pigraOther">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-3">
+                    <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
+                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
+                            data-wow-delay="0.1s">
+                            <p class="text-white sub-title">Other</p>
+                            <h1 class="display-6 text-white mb-0">其他经历</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="service-content h-100 pt-6 ps-6 pb-6">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-xl-2">
+                                            <i class="fas fa-bezier-curve fa-3x"></i>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <a href="#" class="h4 mb-0">学业</a>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <p class="mb-0">学业二等奖学金</p>
+                                            <p class="mb-0"> 三好学生 </p>
+                                        </div>
+                                        <!-- <div class="col-xl-3">
+                                            <p><i class="fa fa-check me-2"></i> </p>
+                                            <p><i class="fa fa-check me-2"></i> Research</p>
+                                            <p class="mb-0"><i class="fa fa-check me-2"></i> Mobile App</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-xl-2">
+                                            <i class="fas fa-laptop-code fa-3x"></i>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <a href="#" class="h4 mb-0">考级</a>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <p class="mb-0">
+                                            <p class="mb-0">CET-4</p>
+                                            <p class="mb-0">CET-6</p>
+                                            </p>
+                                        </div>
+                                        <!-- <div class="col-xl-3">
+                                            <p><i class="fa fa-check me-2"></i> UI/UX Design</p>
+                                            <p><i class="fa fa-check me-2"></i> Research</p>
+                                            <p class="mb-0"><i class="fa fa-check me-2"></i> Mobile App</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-xl-2">
+                                            <i class="fab fa-app-store fa-3x"></i>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <a href="#" class="h4 mb-0">比赛</a>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <p class="mb-0">
+                                                数模
+                                            </p>
+                                            <p class="mb-0">
+                                                创新创业
+                                            </p>
+                                        </div>
+                                        <!-- <div class="col-xl-3">
+                                            <p><i class="fa fa-check me-2"></i> UI/UX Design</p>
+                                            <p><i class="fa fa-check me-2"></i> Research</p>
+                                            <p class="mb-0"><i class="fa fa-check me-2"></i> Mobile App</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark border-bottom-0">
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-12">
+                    <div class="footer-content h-100 pt-6 ps-6 pb-6">
+                        <div class="row g-4 align-items-center">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
